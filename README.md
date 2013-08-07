@@ -1,5 +1,6 @@
-# Generator-stylish
+# Sass Boilerplate Yeoman Generator
 [![Build Status](https://secure.travis-ci.org/srsgores/generator-sass-boilerplate.png?branch=master)](https://travis-ci.org/srsgores/generator-sass-boilerplate)
+![SASS Boilerplate Yeoman Generator](http://i42.tinypic.com/2na06e0.png)
 
 A SASS (SCSS) generator for Yeoman.  Quickly scaffolds out new SCSS files for a new project.
 
@@ -18,6 +19,8 @@ and description
 Allows for leaner, better CSS.  Optionally includes animation mixins and helpers.
 * Icon names are included when you decide to use basic Icomoon icons.  You can easily change an element into an icon
 by doing ``@extend .icon-name``
+* Quickly scaffold out your new app's styles with the ability to include/exclude files: default styles,
+CSS3 menu styles, form styles, type styles, and [Eric Meyer's reset](https://gist.github.com/tcomaj/2670718).
 
 ## License
 [MIT License](http://en.wikipedia.org/wiki/MIT_License)

@@ -1,0 +1,123 @@
+/*------------------------------------------------------------------------------------------------------------------------
+ @package: <%= name %> (app)
+
+ @author: <%= authorName %>
+ @www: <%= authorURL %>
+ @github: <%= authorGitHub %>
+
+ @twitter: <%= authorTwitter %>
+
+ @copyright: COPYRIGHT <%= currentDate %> <%= authorCompanyName %>
+ =============================================================================
+ Filename: _variables.scss
+ =============================================================================
+ This file is responsible for all variables in the <%= name %> app.  Styles should be compiled using compass and sass.
+ --------------------------------------------------------------------------------------------------------------------- */
+
+@import "compass/css3/pie";
+@import "compass/css3";
+
+/* =============================================================================
+CSS3 PIE
+========================================================================== */
+$pie-enabled: false !default;
+$pie-behavior: url("/css/PIE.htc");
+$pie-base-class: pie-element;
+
+$<%= _.camelize(name) %>Multiplier: 1.3 !default;
+$<%= _.camelize(name) %>MultiplierLarge: $<%= _.camelize(name) %>Multiplier * 2.1 !default;
+$<%= _.camelize(name) %>MultiplierSmall: $<%= _.camelize(name) %>Multiplier / $<%= _.camelize(name) %>MultiplierLarge !default;
+
+$<%= _.camelize(name) %>MultiplierLargePercentage: $<%= _.camelize(name) %>MultiplierLarge * 10%;
+
+/* =============================================================================
+Sizes and Spacing
+========================================================================== */
+
+/* Padding */
+$<%= _.camelize(name) %>Padding: 1em !default;
+$<%= _.camelize(name) %>PaddingLarge: $<%= _.camelize(name) %>Padding * $<%= _.camelize(name) %>Multiplier;
+$<%= _.camelize(name) %>PaddingSmall: $<%= _.camelize(name) %>Padding / $<%= _.camelize(name) %>Multiplier;
+$<%= _.camelize(name) %>PaddingMini: $<%= _.camelize(name) %>Padding / $<%= _.camelize(name) %>MultiplierLarge;
+
+/* Margin */
+$<%= _.camelize(name) %>Margin: 1em !default;
+$<%= _.camelize(name) %>MarginSmall: $<%= _.camelize(name) %>Margin / $<%= _.camelize(name) %>Multiplier;
+$<%= _.camelize(name) %>MarginLarge: $<%= _.camelize(name) %>Margin * $<%= _.camelize(name) %>MultiplierLarge;
+$<%= _.camelize(name) %>MarginMini: $<%= _.camelize(name) %>MarginSmall / $<%= _.camelize(name) %>MultiplierLarge;
+
+/* =============================================================================
+Grid
+========================================================================== */
+$<%= _.camelize(name) %>Num-cols: 12 !default;
+$<%= _.camelize(name) %>RowWidth: 100% !default;
+$<%= _.camelize(name) %>Container-lateral-padding: $<%= _.camelize(name) %>Padding !default;
+$<%= _.camelize(name) %>Col-margin-right: 3.8% !default;
+$<%= _.camelize(name) %>Col-unit: (($<%= _.camelize(name) %>RowWidth + $<%= _.camelize(name) %>Col-margin-right) / $<%= _.camelize(name) %>Num-cols) !default;
+
+$<%= _.camelize(name) %>RowNotation: row !default;
+$<%= _.camelize(name) %>ColumnNotation: col !default;
+
+$<%= _.camelize(name) %>Container-width: $<%= _.camelize(name) %>RowWidth;
+$<%= _.camelize(name) %>Total-columns: $<%= _.camelize(name) %>Num-cols;
+$<%= _.camelize(name) %>Column-width: 4% !default;
+$<%= _.camelize(name) %>Gutter-width: 2% !default;
+$<%= _.camelize(name) %>Grid-padding: 0% !default; //rows should take up the whole screen
+$<%= _.camelize(name) %>From-direction: left;
+
+$<%= _.camelize(name) %>Container-style: fluid;
+
+//Turn off media-query fallback output for non-IE stylesheets.
+$<%= _.camelize(name) %>Breakpoint-ie-output: true;
+/* =============================================================================
+Type
+========================================================================== */
+$<%= _.camelize(name) %>FontURL: "http://fonts.googleapis.com/css?family=Open+Sans:400,300"; //google font url.  Imported at _type.scss
+$<%= _.camelize(name) %>Em: 1em !default;
+$<%= _.camelize(name) %>BaseFontSize: 100% !default;
+$<%= _.camelize(name) %>BaseFontFamily: "Open Sans", "sans-serif", "arial" !default;
+$<%= _.camelize(name) %>FontSizeSmall: ($<%= _.camelize(name) %>BaseFontSize / $<%= _.camelize(name) %>MultiplierSmall) !default;
+$<%= _.camelize(name) %>FontSizeMedium: ($<%= _.camelize(name) %>BaseFontSize * $<%= _.camelize(name) %>Multiplier) !default;
+$<%= _.camelize(name) %>FontSizeLarge: ($<%= _.camelize(name) %>BaseFontSize * $<%= _.camelize(name) %>MultiplierLarge) !default;
+$<%= _.camelize(name) %>FontSizeMini: ($<%= _.camelize(name) %>BaseFontSize / $<%= _.camelize(name) %>MultiplierLarge) !default;
+$<%= _.camelize(name) %>LineHeight: 1.4 !default;
+
+$<%= _.camelize(name) %>HeadingFontWeight: 300 !default;
+$<%= _.camelize(name) %>BaseFontWeight: 500 !default;
+
+$<%= _.camelize(name) %>BorderRadius: ($<%= _.camelize(name) %>Margin / $<%= _.camelize(name) %>MultiplierLarge) !default;
+$<%= _.camelize(name) %>BorderRadiusSmall: ($<%= _.camelize(name) %>BorderRadius / $<%= _.camelize(name) %>Multiplier) !default;
+$<%= _.camelize(name) %>BorderRadiusLarge: ($<%= _.camelize(name) %>BorderRadius * $<%= _.camelize(name) %>MultiplierLarge) !default;
+
+/* Transitions*/
+$<%= _.camelize(name) %>TransitionTime: 0.5s !default; //global transition time
+$<%= _.camelize(name) %>TransitionFunction: ease !default; //transition function for CSS3 transitions
+/* =============================================================================
+Colours
+========================================================================== */
+$<%= _.camelize(name) %>TextColour: #000 !default;
+$<%= _.camelize(name) %>InverseTextColour: invert($<%= _.camelize(name) %>TextColour) !default;
+$<%= _.camelize(name) %>PrimaryColour: #CCC !default; // colour of text and main colour overall
+$<%= _.camelize(name) %>SecondaryColour: #0f0f0f !default; // colour of any components, backgrounds, etc.
+$<%= _.camelize(name) %>TertiaryColour: #7c7c7c !default; //special colour to complement secondary colour
+//background colour.  Should be the opposite of primary colour for good results
+$<%= _.camelize(name) %>BodyBackground: $<%= _.camelize(name) %>InverseTextColour !default;
+
+/* Links */
+$<%= _.camelize(name) %>LinkColour: contrast-color($<%= _.camelize(name) %>TextColour, lighten($<%= _.camelize(name) %>TextColour, 30), darken($<%= _.camelize(name) %>TextColour, 30), 40%);
+
+/* =============================================================================
+Borders
+========================================================================== */
+$<%= _.camelize(name) %>BorderWidth: 1px !default;
+$<%= _.camelize(name) %>BorderStyle: solid !default;
+$<%= _.camelize(name) %>BorderColour: fade-out(lighten($<%= _.camelize(name) %>TextColour, 80%), 0.5) !default;
+$<%= _.camelize(name) %>Border: $<%= _.camelize(name) %>BorderWidth $<%= _.camelize(name) %>BorderStyle $<%= _.camelize(name) %>BorderColour;
+
+/* =============================================================================
+Media query variables
+========================================================================== */
+$<%= _.camelize(name) %>BreakpointMain: (screen) (max-width 767px);
+$<%= _.camelize(name) %>QueryIphone3: (only screen) (min-device-width 320px) (max-device-width 480px) (1 -webkit-device-pixel-ratio);
+$<%= _.camelize(name) %>QueryIphone3Portrait: (only screen) (min-device-width 320px) (max-device-width 480px) (1 -webkit-device-pixel-ratio) (orientation portrait);
+$<%= _.camelize(name) %>QueryIphone3Landscape: (only screen) (min-device-width 320px) (max-device-width 480px) (1 -webkit-device-pixel-ratio) (orientation landscape);

@@ -1,0 +1,43 @@
+/*------------------------------------------------------------------------------------------------------------------------
+ @package: <%= name %> (app)
+
+ @author: <%= authorName %>
+ @www: <%= authorURL %>
+ @github: <%= authorGitHub %>
+
+ @twitter: <%= authorTwitter %>
+
+ @copyright: COPYRIGHT <%= currentDate %> <%= authorCompanyName %>
+ =============================================================================
+ Filename: style.scss
+ =============================================================================
+ This file is responsible for all styles on the <%= name %> app.  Styles should be compiled using compass and sass.
+ --------------------------------------------------------------------------------------------------------------------- */
+
+/* =============================================================================
+Imports
+========================================================================== */
+/* Base imports */
+@import "compass/utilities";
+@import "partials/_variables.scss";
+@import "partials/_helpers.scss";
+<% if (includeReset) {%>@import "partials/_animations";<% } %>
+<% if (includeReset) {%>@import "compass/reset";<% } %>
+@import "compass/css3/pie";
+@import "compass/css3";
+@import "partials/_variables.scss";
+@import "partials/_grids.scss";
+<% if (includeIcomoon) {%>@import "partials/icomoon/_icomoon.scss";<% } %>
+@import "partials/_mixins.scss";
+
+/* Optional imports */
+<% if (includeAnimations) {%>@import "partials/_animations";<% } %>
+<% if (includeTypeHelpers) {%>@import "partials/_type.scss";<% } %>
+<% if (includeFormHelpers) {%>@import "partials/_forms.scss";<% } %>
+<% if (includeIcomoon) {%>@import "partials/_nav.scss";<% } %>
+<% if (includeBasicStyles) {%>@import "partials/_base.scss";<% } %>
+@import "partials/_media-queries";
+
+/* =============================================================================
+Main Styles
+========================================================================== */

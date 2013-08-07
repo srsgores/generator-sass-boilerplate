@@ -1,0 +1,70 @@
+/*------------------------------------------------------------------------------------------------------------------------
+ @author: <%= authorName %>
+ @www: <%= authorURL %>
+ @github: <%= authorGitHub %>
+
+ @twitter: <%= authorTwitter %>
+
+ @copyright: COPYRIGHT <%= currentDate %> <%= authorCompanyName %>
+ =============================================================================
+ Filename: _base.scss
+ =============================================================================
+ This file is responsible for establishing base styles for the <%= name %> app.
+ --------------------------------------------------------------------------------------------------------------------- */
+
+body {
+	color: $<%= _.camelize(name) %>TextColour;
+	background: $<%= _.camelize(name) %>BodyBackground;
+	line-height: $<%= _.camelize(name) %>LineHeight;
+	font-family: $<%= _.camelize(name) %>BaseFontFamily;
+}
+
+.box {
+	@extend %normal-margin;
+	@extend %border-box;
+	@extend %normal-padding;
+	@extend %bordered;
+	@extend %rounded;
+	@extend %transition-all;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, p, h1, h2, h3, h4, h5, h6, blockquote, pre, address, cite, code, del, dfn, img, q, dl, ul, fieldset, form, legend, table, caption, summary, audio, video, %normal-margin-bottom {
+	@extend %normal-margin-bottom; //spaced only at bottom by default
+}
+
+nav, nav li, .toolbar, .toolbar li, .btn-group {
+	@extend %inline;
+	ul {
+		@extend %margin-none;
+		@extend %padding-none;
+	}
+	input {
+		@extend %inline;
+	}
+}
+
+/* =============================================================================
+Border Radius
+========================================================================== */
+nav, button, .btn, pre, code, aside, menu {
+	@extend %rounded;
+}
+
+header, footer, article, section {
+	@extend %bordered-bottom;
+	@extend %bordered-top;
+}
+
+/* =============================================================================
+Shadows
+========================================================================== */
+.shadowed {
+	@include box-shadow(inset 0 0 3em fade-out($<%= _.camelize(name) %>TextColour, 0.7));
+}
+
+/* =============================================================================
+images
+========================================================================== */
+img, object, embed {
+	max-width: $<%= _.camelize(name) %>RowWidth; //prevent images from going beyond the viewport
+}

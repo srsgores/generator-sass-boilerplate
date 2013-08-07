@@ -1,0 +1,42 @@
+/*------------------------------------------------------------------------------------------------------------------------
+ @package: <%= name %> (app)
+
+ @author: <%= authorName %>
+ @www: <%= authorURL %>
+ @github: <%= authorGitHub %>
+
+ @twitter: <%= authorTwitter %>
+
+ @copyright: COPYRIGHT <%= currentDate %> <%= authorCompanyName %>
+ =============================================================================
+ Filename: _type.scss
+ =============================================================================
+ This file is responsible for typographic elements on the <%= name %> app.  Styles should be compiled using compass and sass.
+ --------------------------------------------------------------------------------------------------------------------- */
+
+@import url($<%= _.camelize(name) %>FontURL);
+
+/* Type */
+#{headings(all)} {
+	font-weight: $<%= _.camelize(name) %>HeadingFontWeight;
+}
+
+@for $i from 1 through 6 {
+	h#{$i} {
+		font-size: (($<%= _.camelize(name) %>Em * $<%= _.camelize(name) %>MultiplierLarge) - (($i * (($<%= _.camelize(name) %>Em * $<%= _.camelize(name) %>MultiplierLarge) / 6 )))) + ($<%= _.camelize(name) %>Em * $<%= _.camelize(name) %>Multiplier);
+	}
+}
+
+a {
+	@extend %transition-all;
+	color: $<%= _.camelize(name) %>InverseTextColour;
+	&:visited {
+		color: darken($<%= _.camelize(name) %>TextColour, 30);
+	}
+	text-decoration: none;
+}
+
+ul, ol, dl {
+	padding-left: ($<%= _.camelize(name) %>PaddingLarge * $<%= _.camelize(name) %>Multiplier);
+	@extend %normal-margin-top-bottom;
+}

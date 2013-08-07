@@ -1,0 +1,23 @@
+/*------------------------------------------------------------------------------------------------------------------------
+ @author: <%= authorName %>
+ @www: <%= authorURL %>
+ @github: <%= authorGitHub %>
+
+ @twitter: <%= authorTwitter %>
+
+ @copyright: COPYRIGHT <%= currentDate %> <%= authorCompanyName %>
+ =============================================================================
+ Filename: _animations.scss
+ =============================================================================
+ This file is responsible for all custom animations and delays in the <%= name %> app.
+ --------------------------------------------------------------------------------------------------------------------- */
+
+@import "companimation";
+@import "companimation/preset/fade/fadeIn";
+@import "companimation/preset/fade/fadeInUp"; //modify to not include all animations
+
+@for $i from 1 through 10 {
+	%delayed-#{$i} {
+		@include animation-delay(($i * $<%= _.camelize(name) %>TransitionTime));
+	}
+}

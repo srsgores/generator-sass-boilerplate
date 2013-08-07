@@ -1,0 +1,1847 @@
+/*------------------------------------------------------------------------------------------------------------------------
+ @author: <%= authorName %>
+ @www: <%= authorURL %>
+ @github: <%= authorGitHub %>
+
+ @twitter: <%= authorTwitter %>
+
+ @copyright: COPYRIGHT <%= currentDate %> <%= authorCompanyName %>
+ =============================================================================
+ Filename: _icomoon.scss
+ =============================================================================
+ This file is responsible for all custom vector icons (via icomoon) in the <%= name %> app.
+ --------------------------------------------------------------------------------------------------------------------- */
+
+/* =============================================================================
+Helpers
+========================================================================== */
+@font-face {
+	font-family: "icomoon";
+	src: url("../fonts/icomoon/icomoon.eot");
+	src: url("../fonts/icomoon/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.woff") format("woff"), url("../fonts/icomoon/icomoon.ttf") format("truetype"), url("../fonts/icomoon/icomoon.svg#icomoon") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+%icomoon {
+	font-family: "icomoon";
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+$<%= _.camelize(name) %>Icons: glass,music,search,envelope,heart,star,star-empty,user,film,th-large,th,th-list,remove,zoom-in,zoom-out,off,signal,cog,trash,home,file,time,road,download-alt,download,upload,repeat,refresh,list-alt,lock,flag,headphones,volume-off,volume-down,volume-up,qrcode,tag,tags,book,bookmark,print,camera,font,bold,italic,text-height,text-width,align-left,align-center,align-right,align-justify,list,indent-left,indent-right,picture,pencil,map-marker,adjust,edit,share,move,step-backward,fast-backward,backward,play,pause,stop,forward,fast-forward,step-forward,eject,chevron-left,chevron-right,plus-sign,minus-sign,remove-sign,question-sign,info-sign,screenshot,arrow-left,arrow-right,arrow-up,arrow-down,share-alt,resize-full,resize-small,plus,minus,gift,leaf,fire,eye-open,eye-close,warning-sign,plane,random,comment,magnet,chevron-up,chevron-down,retweet,folder-close,resize-vertical,resize-horizontal,twitter-sign,facebook-sign,key,cogs,comments,thumbs-up,thumbs-down,heart-empty,signout,linkedin-sign,pushpin,external-link,signin,trophy,github-sign,upload-alt,lemon,phone,bookmark-empty,phone-sign,twitter,facebook,github,unlock,credit,rss,hdd,bullhorn,bell,certificate,hand-right,hand-left,hand-up,hand-down,circle-arrow-left,circle-arrow-right,circle-arrow-up,circle-arrow-down,globe,wrench,tasks,filter,briefcase,fullscreen,group,link,cloud,beaker,cut,copy,paper-clip,save,sign-blank,reorder,list-ul,list-ol,strikethrough,underline,table,magic,truck,pinterest,google-plus-sign,google-plus,money,caret-down,caret-up,caret-left,caret-right,columns,sort,sort-down,sort-up,envelope-alt,linkedin,undo,legal,dashboard,comment-alt,comments-alt,bolt,sitemap,umbrella,paste,stethoscope,suitcase,bell-alt,coffee,food,file-alt,building,hospital,ambulance,medkit,angle-up,angle-down,desktop,laptop,tablet,mobile,circle-blank,quote-left,quote-right,paperclip,reply-all,forward-2,user-2,users,heart-2,heart-3,thumbs-up-2,thumbs-down-2,publish,chat,comment-2,skypeonline,error,drawer,drawer-2,drawer-3,volume-high,images,image,pencil-2,cart,coin,credit-2,phone-2,menu,earth,briefcase-2,airplane,truck-2,road-2,happy,sad,checkmark,checkmark-circle,file-pdf,file-openoffice,file-word,file-excel,file-zip,file-css,checkout,file-powerpoint,twitter-2,google-plus-2,facebook-2,flickr,flickr-2,vimeo,soundcloud,skype,apple,windows8,chrome,firefox,IE,opera,barcode,locked,redo,reply,file-add,folder-open,cord,cube,puzzle,tools,equalizer,brush,checkbox-partial,calendar,calendar-2,lifebuoy,exclamation-sign,box-add,box-remove,facetime-video,play-2,play-3,database,aid,vcard,compass,map,lightbulb,stats,pie,cart-2,share-2,html5,github-2,youtube,file-xml,alert;
+
+$<%= _.camelize(name) %>Icon-glass: "\f000";
+
+$<%= _.camelize(name) %>Icon-music: "\f001";
+
+$<%= _.camelize(name) %>Icon-search: "\f002";
+
+$<%= _.camelize(name) %>Icon-envelope: "\f003";
+
+$<%= _.camelize(name) %>Icon-heart: "\f004";
+
+$<%= _.camelize(name) %>Icon-star: "\f005";
+
+$<%= _.camelize(name) %>Icon-star-empty: "\f006";
+
+$<%= _.camelize(name) %>Icon-user: "\f007";
+
+$<%= _.camelize(name) %>Icon-film: "\f008";
+
+$<%= _.camelize(name) %>Icon-th-large: "\f009";
+
+$<%= _.camelize(name) %>Icon-th: "\f00a";
+
+$<%= _.camelize(name) %>Icon-th-list: "\f00b";
+
+$<%= _.camelize(name) %>Icon-remove: "\f00d";
+
+$<%= _.camelize(name) %>Icon-zoom-in: "\f00e";
+
+$<%= _.camelize(name) %>Icon-zoom-out: "\f010";
+
+$<%= _.camelize(name) %>Icon-off: "\f011";
+
+$<%= _.camelize(name) %>Icon-signal: "\f012";
+
+$<%= _.camelize(name) %>Icon-cog: "\f013";
+
+$<%= _.camelize(name) %>Icon-trash: "\f014";
+
+$<%= _.camelize(name) %>Icon-home: "\f015";
+
+$<%= _.camelize(name) %>Icon-file: "\f016";
+
+$<%= _.camelize(name) %>Icon-time: "\f017";
+
+$<%= _.camelize(name) %>Icon-road: "\f018";
+
+$<%= _.camelize(name) %>Icon-download-alt: "\f019";
+
+$<%= _.camelize(name) %>Icon-download: "\f01a";
+
+$<%= _.camelize(name) %>Icon-upload: "\f01b";
+
+$<%= _.camelize(name) %>Icon-repeat: "\f01e";
+
+$<%= _.camelize(name) %>Icon-refresh: "\f021";
+
+$<%= _.camelize(name) %>Icon-list-alt: "\f022";
+
+$<%= _.camelize(name) %>Icon-lock: "\f023";
+
+$<%= _.camelize(name) %>Icon-flag: "\f024";
+
+$<%= _.camelize(name) %>Icon-headphones: "\f025";
+
+$<%= _.camelize(name) %>Icon-volume-off: "\f026";
+
+$<%= _.camelize(name) %>Icon-volume-down: "\f027";
+
+$<%= _.camelize(name) %>Icon-volume-up: "\f028";
+
+$<%= _.camelize(name) %>Icon-qrcode: "\f029";
+
+$<%= _.camelize(name) %>Icon-tag: "\f02b";
+
+$<%= _.camelize(name) %>Icon-tags: "\f02c";
+
+$<%= _.camelize(name) %>Icon-book: "\f02d";
+
+$<%= _.camelize(name) %>Icon-bookmark: "\f02e";
+
+$<%= _.camelize(name) %>Icon-print: "\f02f";
+
+$<%= _.camelize(name) %>Icon-camera: "\f030";
+
+$<%= _.camelize(name) %>Icon-font: "\f031";
+
+$<%= _.camelize(name) %>Icon-bold: "\f032";
+
+$<%= _.camelize(name) %>Icon-italic: "\f033";
+
+$<%= _.camelize(name) %>Icon-text-height: "\f034";
+
+$<%= _.camelize(name) %>Icon-text-width: "\f035";
+
+$<%= _.camelize(name) %>Icon-align-left: "\f036";
+
+$<%= _.camelize(name) %>Icon-align-center: "\f037";
+
+$<%= _.camelize(name) %>Icon-align-right: "\f038";
+
+$<%= _.camelize(name) %>Icon-align-justify: "\f039";
+
+$<%= _.camelize(name) %>Icon-list: "\f03a";
+
+$<%= _.camelize(name) %>Icon-indent-left: "\f03b";
+
+$<%= _.camelize(name) %>Icon-indent-right: "\f03c";
+
+$<%= _.camelize(name) %>Icon-picture: "\f03e";
+
+$<%= _.camelize(name) %>Icon-pencil: "\f040";
+
+$<%= _.camelize(name) %>Icon-map-marker: "\f041";
+
+$<%= _.camelize(name) %>Icon-adjust: "\f042";
+
+$<%= _.camelize(name) %>Icon-edit: "\f044";
+
+$<%= _.camelize(name) %>Icon-share: "\f045";
+
+$<%= _.camelize(name) %>Icon-move: "\f047";
+
+$<%= _.camelize(name) %>Icon-step-backward: "\f048";
+
+$<%= _.camelize(name) %>Icon-fast-backward: "\f049";
+
+$<%= _.camelize(name) %>Icon-backward: "\f04a";
+
+$<%= _.camelize(name) %>Icon-play: "\f04b";
+
+$<%= _.camelize(name) %>Icon-pause: "\f04c";
+
+$<%= _.camelize(name) %>Icon-stop: "\f04d";
+
+$<%= _.camelize(name) %>Icon-forward: "\f04e";
+
+$<%= _.camelize(name) %>Icon-fast-forward: "\f050";
+
+$<%= _.camelize(name) %>Icon-step-forward: "\f051";
+
+$<%= _.camelize(name) %>Icon-eject: "\f052";
+
+$<%= _.camelize(name) %>Icon-chevron-left: "\f053";
+
+$<%= _.camelize(name) %>Icon-chevron-right: "\f054";
+
+$<%= _.camelize(name) %>Icon-plus-sign: "\f055";
+
+$<%= _.camelize(name) %>Icon-minus-sign: "\f056";
+
+$<%= _.camelize(name) %>Icon-remove-sign: "\f057";
+
+$<%= _.camelize(name) %>Icon-question-sign: "\f059";
+
+$<%= _.camelize(name) %>Icon-info-sign: "\f05a";
+
+$<%= _.camelize(name) %>Icon-screenshot: "\f05b";
+
+$<%= _.camelize(name) %>Icon-arrow-left: "\f060";
+
+$<%= _.camelize(name) %>Icon-arrow-right: "\f061";
+
+$<%= _.camelize(name) %>Icon-arrow-up: "\f062";
+
+$<%= _.camelize(name) %>Icon-arrow-down: "\f063";
+
+$<%= _.camelize(name) %>Icon-share-alt: "\f064";
+
+$<%= _.camelize(name) %>Icon-resize-full: "\f065";
+
+$<%= _.camelize(name) %>Icon-resize-small: "\f066";
+
+$<%= _.camelize(name) %>Icon-plus: "\f067";
+
+$<%= _.camelize(name) %>Icon-minus: "\f068";
+
+$<%= _.camelize(name) %>Icon-gift: "\f06b";
+
+$<%= _.camelize(name) %>Icon-leaf: "\f06c";
+
+$<%= _.camelize(name) %>Icon-fire: "\f06d";
+
+$<%= _.camelize(name) %>Icon-eye-open: "\f06e";
+
+$<%= _.camelize(name) %>Icon-eye-close: "\f070";
+
+$<%= _.camelize(name) %>Icon-warning-sign: "\f071";
+
+$<%= _.camelize(name) %>Icon-plane: "\f072";
+
+$<%= _.camelize(name) %>Icon-random: "\f074";
+
+$<%= _.camelize(name) %>Icon-comment: "\f075";
+
+$<%= _.camelize(name) %>Icon-magnet: "\f076";
+
+$<%= _.camelize(name) %>Icon-chevron-up: "\f077";
+
+$<%= _.camelize(name) %>Icon-chevron-down: "\f078";
+
+$<%= _.camelize(name) %>Icon-retweet: "\f079";
+
+$<%= _.camelize(name) %>Icon-folder-close: "\f07b";
+
+$<%= _.camelize(name) %>Icon-resize-vertical: "\f07d";
+
+$<%= _.camelize(name) %>Icon-resize-horizontal: "\f07e";
+
+$<%= _.camelize(name) %>Icon-twitter-sign: "\f081";
+
+$<%= _.camelize(name) %>Icon-facebook-sign: "\f082";
+
+$<%= _.camelize(name) %>Icon-key: "\f084";
+
+$<%= _.camelize(name) %>Icon-cogs: "\f085";
+
+$<%= _.camelize(name) %>Icon-comments: "\f086";
+
+$<%= _.camelize(name) %>Icon-thumbs-up: "\f087";
+
+$<%= _.camelize(name) %>Icon-thumbs-down: "\f088";
+
+$<%= _.camelize(name) %>Icon-heart-empty: "\f08a";
+
+$<%= _.camelize(name) %>Icon-signout: "\f08b";
+
+$<%= _.camelize(name) %>Icon-linkedin-sign: "\f08c";
+
+$<%= _.camelize(name) %>Icon-pushpin: "\f08d";
+
+$<%= _.camelize(name) %>Icon-external-link: "\f08e";
+
+$<%= _.camelize(name) %>Icon-signin: "\f090";
+
+$<%= _.camelize(name) %>Icon-trophy: "\f091";
+
+$<%= _.camelize(name) %>Icon-github-sign: "\f092";
+
+$<%= _.camelize(name) %>Icon-upload-alt: "\f093";
+
+$<%= _.camelize(name) %>Icon-lemon: "\f094";
+
+$<%= _.camelize(name) %>Icon-phone: "\f095";
+
+$<%= _.camelize(name) %>Icon-bookmark-empty: "\f097";
+
+$<%= _.camelize(name) %>Icon-phone-sign: "\f098";
+
+$<%= _.camelize(name) %>Icon-twitter: "\f099";
+
+$<%= _.camelize(name) %>Icon-facebook: "\f09a";
+
+$<%= _.camelize(name) %>Icon-github: "\f09b";
+
+$<%= _.camelize(name) %>Icon-unlock: "\f09c";
+
+$<%= _.camelize(name) %>Icon-credit: "\f09d";
+
+$<%= _.camelize(name) %>Icon-rss: "\f09e";
+
+$<%= _.camelize(name) %>Icon-hdd: "\f0a0";
+
+$<%= _.camelize(name) %>Icon-bullhorn: "\f0a1";
+
+$<%= _.camelize(name) %>Icon-bell: "\f0a2";
+
+$<%= _.camelize(name) %>Icon-certificate: "\f0a3";
+
+$<%= _.camelize(name) %>Icon-hand-right: "\f0a4";
+
+$<%= _.camelize(name) %>Icon-hand-left: "\f0a5";
+
+$<%= _.camelize(name) %>Icon-hand-up: "\f0a6";
+
+$<%= _.camelize(name) %>Icon-hand-down: "\f0a7";
+
+$<%= _.camelize(name) %>Icon-circle-arrow-left: "\f0a8";
+
+$<%= _.camelize(name) %>Icon-circle-arrow-right: "\f0a9";
+
+$<%= _.camelize(name) %>Icon-circle-arrow-up: "\f0aa";
+
+$<%= _.camelize(name) %>Icon-circle-arrow-down: "\f0ab";
+
+$<%= _.camelize(name) %>Icon-globe: "\f0ac";
+
+$<%= _.camelize(name) %>Icon-wrench: "\f0ad";
+
+$<%= _.camelize(name) %>Icon-tasks: "\f0ae";
+
+$<%= _.camelize(name) %>Icon-filter: "\f0b0";
+
+$<%= _.camelize(name) %>Icon-briefcase: "\f0b1";
+
+$<%= _.camelize(name) %>Icon-fullscreen: "\f0b2";
+
+$<%= _.camelize(name) %>Icon-group: "\f0c0";
+
+$<%= _.camelize(name) %>Icon-link: "\f0c1";
+
+$<%= _.camelize(name) %>Icon-cloud: "\f0c2";
+
+$<%= _.camelize(name) %>Icon-beaker: "\f0c3";
+
+$<%= _.camelize(name) %>Icon-cut: "\f0c4";
+
+$<%= _.camelize(name) %>Icon-copy: "\f0c5";
+
+$<%= _.camelize(name) %>Icon-paper-clip: "\f0c6";
+
+$<%= _.camelize(name) %>Icon-save: "\f0c7";
+
+$<%= _.camelize(name) %>Icon-sign-blank: "\f0c8";
+
+$<%= _.camelize(name) %>Icon-reorder: "\f0c9";
+
+$<%= _.camelize(name) %>Icon-list-ul: "\f0ca";
+
+$<%= _.camelize(name) %>Icon-list-ol: "\f0cb";
+
+$<%= _.camelize(name) %>Icon-strikethrough: "\f0cc";
+
+$<%= _.camelize(name) %>Icon-underline: "\f0cd";
+
+$<%= _.camelize(name) %>Icon-table: "\f0ce";
+
+$<%= _.camelize(name) %>Icon-magic: "\f0d0";
+
+$<%= _.camelize(name) %>Icon-truck: "\f0d1";
+
+$<%= _.camelize(name) %>Icon-pinterest: "\f0d2";
+
+$<%= _.camelize(name) %>Icon-google-plus-sign: "\f0d4";
+
+$<%= _.camelize(name) %>Icon-google-plus: "\f0d5";
+
+$<%= _.camelize(name) %>Icon-money: "\f0d6";
+
+$<%= _.camelize(name) %>Icon-caret-down: "\f0d7";
+
+$<%= _.camelize(name) %>Icon-caret-up: "\f0d8";
+
+$<%= _.camelize(name) %>Icon-caret-left: "\f0d9";
+
+$<%= _.camelize(name) %>Icon-caret-right: "\f0da";
+
+$<%= _.camelize(name) %>Icon-columns: "\f0db";
+
+$<%= _.camelize(name) %>Icon-sort: "\f0dc";
+
+$<%= _.camelize(name) %>Icon-sort-down: "\f0dd";
+
+$<%= _.camelize(name) %>Icon-sort-up: "\f0de";
+
+$<%= _.camelize(name) %>Icon-envelope-alt: "\f0e0";
+
+$<%= _.camelize(name) %>Icon-linkedin: "\f0e1";
+
+$<%= _.camelize(name) %>Icon-undo: "\f0e2";
+
+$<%= _.camelize(name) %>Icon-legal: "\f0e3";
+
+$<%= _.camelize(name) %>Icon-dashboard: "\f0e4";
+
+$<%= _.camelize(name) %>Icon-comment-alt: "\f0e5";
+
+$<%= _.camelize(name) %>Icon-comments-alt: "\f0e6";
+
+$<%= _.camelize(name) %>Icon-bolt: "\f0e7";
+
+$<%= _.camelize(name) %>Icon-sitemap: "\f0e8";
+
+$<%= _.camelize(name) %>Icon-umbrella: "\f0e9";
+
+$<%= _.camelize(name) %>Icon-paste: "\f0ea";
+
+$<%= _.camelize(name) %>Icon-stethoscope: "\f0eb";
+
+$<%= _.camelize(name) %>Icon-suitcase: "\f0ec";
+
+$<%= _.camelize(name) %>Icon-bell-alt: "\f0ed";
+
+$<%= _.camelize(name) %>Icon-coffee: "\f0ee";
+
+$<%= _.camelize(name) %>Icon-food: "\f0f0";
+
+$<%= _.camelize(name) %>Icon-file-alt: "\f0f1";
+
+$<%= _.camelize(name) %>Icon-building: "\f0f2";
+
+$<%= _.camelize(name) %>Icon-hospital: "\f0f3";
+
+$<%= _.camelize(name) %>Icon-ambulance: "\f0f4";
+
+$<%= _.camelize(name) %>Icon-medkit: "\f0f5";
+
+$<%= _.camelize(name) %>Icon-angle-up: "\f0f6";
+
+$<%= _.camelize(name) %>Icon-angle-down: "\f0f7";
+
+$<%= _.camelize(name) %>Icon-desktop: "\f0f8";
+
+$<%= _.camelize(name) %>Icon-laptop: "\f0f9";
+
+$<%= _.camelize(name) %>Icon-tablet: "\f0fa";
+
+$<%= _.camelize(name) %>Icon-mobile: "\f0fb";
+
+$<%= _.camelize(name) %>Icon-circle-blank: "\f0fc";
+
+$<%= _.camelize(name) %>Icon-quote-left: "\f0fd";
+
+$<%= _.camelize(name) %>Icon-quote-right: "\f0fe";
+
+$<%= _.camelize(name) %>Icon-paperclip: "\f104";
+
+$<%= _.camelize(name) %>Icon-reply-all: "\f107";
+
+$<%= _.camelize(name) %>Icon-forward-2: "\f108";
+
+$<%= _.camelize(name) %>Icon-user-2: "\f109";
+
+$<%= _.camelize(name) %>Icon-users: "\f10a";
+
+$<%= _.camelize(name) %>Icon-heart-2: "\f10b";
+
+$<%= _.camelize(name) %>Icon-heart-3: "\f10c";
+
+$<%= _.camelize(name) %>Icon-thumbs-up-2: "\f110";
+
+$<%= _.camelize(name) %>Icon-thumbs-down-2: "\f111";
+
+$<%= _.camelize(name) %>Icon-chat: "\f112";
+
+$<%= _.camelize(name) %>Icon-comment-2: "\f113";
+
+$<%= _.camelize(name) %>Icon-skypeonline: "\f39e";
+
+$<%= _.camelize(name) %>Icon-error: "\e002";
+
+$<%= _.camelize(name) %>Icon-drawer: "\e003";
+
+$<%= _.camelize(name) %>Icon-drawer-2: "\e004";
+
+$<%= _.camelize(name) %>Icon-drawer-3: "\e005";
+
+$<%= _.camelize(name) %>Icon-volume-high: "\e006";
+
+$<%= _.camelize(name) %>Icon-images: "\e008";
+
+$<%= _.camelize(name) %>Icon-image: "\e009";
+
+$<%= _.camelize(name) %>Icon-pencil-2: "\e00a";
+
+$<%= _.camelize(name) %>Icon-cart: "\e00e";
+
+$<%= _.camelize(name) %>Icon-coin: "\e00c";
+
+$<%= _.camelize(name) %>Icon-credit-2: "\e00d";
+
+$<%= _.camelize(name) %>Icon-phone-2: "\e00f";
+
+$<%= _.camelize(name) %>Icon-menu: "\e011";
+
+$<%= _.camelize(name) %>Icon-earth: "\e012";
+
+$<%= _.camelize(name) %>Icon-briefcase-2: "\e013";
+
+$<%= _.camelize(name) %>Icon-airplane: "\e014";
+
+$<%= _.camelize(name) %>Icon-truck-2: "\e015";
+
+$<%= _.camelize(name) %>Icon-road-2: "\e016";
+
+$<%= _.camelize(name) %>Icon-happy: "\e018";
+
+$<%= _.camelize(name) %>Icon-sad: "\e01b";
+
+$<%= _.camelize(name) %>Icon-checkmark: "\e019";
+
+$<%= _.camelize(name) %>Icon-checkmark-circle: "\e01c";
+
+$<%= _.camelize(name) %>Icon-file-pdf: "\e020";
+
+$<%= _.camelize(name) %>Icon-file-openoffice: "\e021";
+
+$<%= _.camelize(name) %>Icon-file-word: "\e022";
+
+$<%= _.camelize(name) %>Icon-file-excel: "\e023";
+
+$<%= _.camelize(name) %>Icon-file-zip: "\e024";
+
+$<%= _.camelize(name) %>Icon-file-css: "\e025";
+
+$<%= _.camelize(name) %>Icon-file-powerpoint: "\e026";
+
+$<%= _.camelize(name) %>Icon-twitter-2: "\e027";
+
+$<%= _.camelize(name) %>Icon-google-plus-2: "\e02a";
+
+$<%= _.camelize(name) %>Icon-facebook-2: "\e028";
+
+$<%= _.camelize(name) %>Icon-flickr: "\e029";
+
+$<%= _.camelize(name) %>Icon-flickr-2: "\e02b";
+
+$<%= _.camelize(name) %>Icon-vimeo: "\e02c";
+
+$<%= _.camelize(name) %>Icon-soundcloud: "\e02f";
+
+$<%= _.camelize(name) %>Icon-skype: "\e030";
+
+$<%= _.camelize(name) %>Icon-apple: "\e031";
+
+$<%= _.camelize(name) %>Icon-windows8: "\e032";
+
+$<%= _.camelize(name) %>Icon-chrome: "\e033";
+
+$<%= _.camelize(name) %>Icon-firefox: "\e034";
+
+$<%= _.camelize(name) %>Icon-IE: "\e035";
+
+$<%= _.camelize(name) %>Icon-opera: "\e036";
+
+$<%= _.camelize(name) %>Icon-barcode: "\f02a";
+
+$<%= _.camelize(name) %>Icon-locked: "\e000";
+
+$<%= _.camelize(name) %>Icon-redo: "\e001";
+
+$<%= _.camelize(name) %>Icon-reply: "\f106";
+
+$<%= _.camelize(name) %>Icon-file-add: "\e037";
+
+$<%= _.camelize(name) %>Icon-folder-open: "\f07c";
+
+$<%= _.camelize(name) %>Icon-cord: "\e00b";
+
+$<%= _.camelize(name) %>Icon-cube: "\e038";
+
+$<%= _.camelize(name) %>Icon-puzzle: "\e039";
+
+$<%= _.camelize(name) %>Icon-tools: "\e03a";
+
+$<%= _.camelize(name) %>Icon-equalizer: "\e03b";
+
+$<%= _.camelize(name) %>Icon-brush: "\e03c";
+
+$<%= _.camelize(name) %>Icon-checkbox-partial: "\e03d";
+
+$<%= _.camelize(name) %>Icon-calendar: "\f073";
+
+$<%= _.camelize(name) %>Icon-calendar-2: "\e03e";
+
+$<%= _.camelize(name) %>Icon-lifebuoy: "\e03f";
+
+$<%= _.camelize(name) %>Icon-exclamation-sign: "\f06a";
+
+$<%= _.camelize(name) %>Icon-box-add: "\e010";
+
+$<%= _.camelize(name) %>Icon-box-remove: "\e017";
+
+$<%= _.camelize(name) %>Icon-facetime-video: "\f03d";
+
+$<%= _.camelize(name) %>Icon-play-2: "\e007";
+
+$<%= _.camelize(name) %>Icon-play-3: "\e01a";
+
+$<%= _.camelize(name) %>Icon-database: "\e01d";
+
+$<%= _.camelize(name) %>Icon-aid: "\e01e";
+
+$<%= _.camelize(name) %>Icon-vcard: "\e01f";
+
+$<%= _.camelize(name) %>Icon-compass: "\e040";
+
+$<%= _.camelize(name) %>Icon-map: "\e041";
+
+$<%= _.camelize(name) %>Icon-lightbulb: "\e02e";
+
+$<%= _.camelize(name) %>Icon-stats: "\e042";
+
+$<%= _.camelize(name) %>Icon-pie: "\e043";
+
+$<%= _.camelize(name) %>Icon-cart-2: "\e044";
+
+$<%= _.camelize(name) %>Icon-share-2: "\e045";
+
+$<%= _.camelize(name) %>Icon-html5: "\e046";
+
+$<%= _.camelize(name) %>Icon-github-2: "\e047";
+
+$<%= _.camelize(name) %>Icon-youtube: "\e02d";
+
+$<%= _.camelize(name) %>Icon-file-xml: "\e048";
+
+$<%= _.camelize(name) %>Icon-alert: "\e049";
+
+
+$<%= _.camelize(name) %>IconClasses: "";
+
+@each $icon in $<%= _.camelize(name) %>Icons {
+	.icon-#{$icon}:before {
+		@extend %icomoon;
+	}
+}
+
+[data-icon]:before {
+	@extend %icomoon;
+}
+
+/* =============================================================================
+Hard-coded icons (for the moment)
+========================================================================== */
+.icon-glass:before {
+	content: "\f000";
+}
+
+.icon-music:before {
+	content: "\f001";
+}
+
+.icon-search:before {
+	content: "\f002";
+}
+
+.icon-envelope:before {
+	content: "\f003";
+}
+
+.icon-heart:before {
+	content: "\f004";
+}
+
+.icon-star:before {
+	content: "\f005";
+}
+
+.icon-star-empty:before {
+	content: "\f006";
+}
+
+.icon-user:before {
+	content: "\f007";
+}
+
+.icon-film:before {
+	content: "\f008";
+}
+
+.icon-th-large:before {
+	content: "\f009";
+}
+
+.icon-th:before {
+	content: "\f00a";
+}
+
+.icon-th-list:before {
+	content: "\f00b";
+}
+
+.icon-remove:before {
+	content: "\f00d";
+}
+
+.icon-zoom-in:before {
+	content: "\f00e";
+}
+
+.icon-zoom-out:before {
+	content: "\f010";
+}
+
+.icon-off:before {
+	content: "\f011";
+}
+
+.icon-signal:before {
+	content: "\f012";
+}
+
+.icon-cog:before {
+	content: "\f013";
+}
+
+.icon-trash:before {
+	content: "\f014";
+}
+
+.icon-home:before {
+	content: "\f015";
+}
+
+.icon-file:before {
+	content: "\f016";
+}
+
+.icon-time:before {
+	content: "\f017";
+}
+
+.icon-road:before {
+	content: "\f018";
+}
+
+.icon-download-alt:before {
+	content: "\f019";
+}
+
+.icon-download:before {
+	content: "\f01a";
+}
+
+.icon-upload:before {
+	content: "\f01b";
+}
+
+.icon-repeat:before {
+	content: "\f01e";
+}
+
+.icon-refresh:before {
+	content: "\f021";
+}
+
+.icon-list-alt:before {
+	content: "\f022";
+}
+
+.icon-lock:before {
+	content: "\f023";
+}
+
+.icon-flag:before {
+	content: "\f024";
+}
+
+.icon-headphones:before {
+	content: "\f025";
+}
+
+.icon-volume-off:before {
+	content: "\f026";
+}
+
+.icon-volume-down:before {
+	content: "\f027";
+}
+
+.icon-volume-up:before {
+	content: "\f028";
+}
+
+.icon-qrcode:before {
+	content: "\f029";
+}
+
+.icon-tag:before {
+	content: "\f02b";
+}
+
+.icon-tags:before {
+	content: "\f02c";
+}
+
+.icon-book:before {
+	content: "\f02d";
+}
+
+.icon-bookmark:before {
+	content: "\f02e";
+}
+
+.icon-print:before {
+	content: "\f02f";
+}
+
+.icon-camera:before {
+	content: "\f030";
+}
+
+.icon-font:before {
+	content: "\f031";
+}
+
+.icon-bold:before {
+	content: "\f032";
+}
+
+.icon-italic:before {
+	content: "\f033";
+}
+
+.icon-text-height:before {
+	content: "\f034";
+}
+
+.icon-text-width:before {
+	content: "\f035";
+}
+
+.icon-align-left:before {
+	content: "\f036";
+}
+
+.icon-align-center:before {
+	content: "\f037";
+}
+
+.icon-align-right:before {
+	content: "\f038";
+}
+
+.icon-align-justify:before {
+	content: "\f039";
+}
+
+.icon-list:before {
+	content: "\f03a";
+}
+
+.icon-indent-left:before {
+	content: "\f03b";
+}
+
+.icon-indent-right:before {
+	content: "\f03c";
+}
+
+.icon-picture:before {
+	content: "\f03e";
+}
+
+.icon-pencil:before {
+	content: "\f040";
+}
+
+.icon-map-marker:before {
+	content: "\f041";
+}
+
+.icon-adjust:before {
+	content: "\f042";
+}
+
+.icon-edit:before {
+	content: "\f044";
+}
+
+.icon-share:before {
+	content: "\f045";
+}
+
+.icon-move:before {
+	content: "\f047";
+}
+
+.icon-step-backward:before {
+	content: "\f048";
+}
+
+.icon-fast-backward:before {
+	content: "\f049";
+}
+
+.icon-backward:before {
+	content: "\f04a";
+}
+
+.icon-play:before {
+	content: "\f04b";
+}
+
+.icon-pause:before {
+	content: "\f04c";
+}
+
+.icon-stop:before {
+	content: "\f04d";
+}
+
+.icon-forward:before {
+	content: "\f04e";
+}
+
+.icon-fast-forward:before {
+	content: "\f050";
+}
+
+.icon-step-forward:before {
+	content: "\f051";
+}
+
+.icon-eject:before {
+	content: "\f052";
+}
+
+.icon-chevron-left:before {
+	content: "\f053";
+}
+
+.icon-chevron-right:before {
+	content: "\f054";
+}
+
+.icon-plus-sign:before {
+	content: "\f055";
+}
+
+.icon-minus-sign:before {
+	content: "\f056";
+}
+
+.icon-remove-sign:before {
+	content: "\f057";
+}
+
+.icon-question-sign:before {
+	content: "\f059";
+}
+
+.icon-info-sign:before {
+	content: "\f05a";
+}
+
+.icon-screenshot:before {
+	content: "\f05b";
+}
+
+.icon-arrow-left:before {
+	content: "\f060";
+}
+
+.icon-arrow-right:before {
+	content: "\f061";
+}
+
+.icon-arrow-up:before {
+	content: "\f062";
+}
+
+.icon-arrow-down:before {
+	content: "\f063";
+}
+
+.icon-share-alt:before {
+	content: "\f064";
+}
+
+.icon-resize-full:before {
+	content: "\f065";
+}
+
+.icon-resize-small:before {
+	content: "\f066";
+}
+
+.icon-plus:before {
+	content: "\f067";
+}
+
+.icon-minus:before {
+	content: "\f068";
+}
+
+.icon-gift:before {
+	content: "\f06b";
+}
+
+.icon-leaf:before {
+	content: "\f06c";
+}
+
+.icon-fire:before {
+	content: "\f06d";
+}
+
+.icon-eye-open:before {
+	content: "\f06e";
+}
+
+.icon-eye-close:before {
+	content: "\f070";
+}
+
+.icon-warning-sign:before {
+	content: "\f071";
+}
+
+.icon-plane:before {
+	content: "\f072";
+}
+
+.icon-random:before {
+	content: "\f074";
+}
+
+.icon-comment:before {
+	content: "\f075";
+}
+
+.icon-magnet:before {
+	content: "\f076";
+}
+
+.icon-chevron-up:before {
+	content: "\f077";
+}
+
+.icon-chevron-down:before {
+	content: "\f078";
+}
+
+.icon-retweet:before {
+	content: "\f079";
+}
+
+.icon-folder-close:before {
+	content: "\f07b";
+}
+
+.icon-resize-vertical:before {
+	content: "\f07d";
+}
+
+.icon-resize-horizontal:before {
+	content: "\f07e";
+}
+
+.icon-twitter-sign:before {
+	content: "\f081";
+}
+
+.icon-facebook-sign:before {
+	content: "\f082";
+}
+
+.icon-key:before {
+	content: "\f084";
+}
+
+.icon-cogs:before {
+	content: "\f085";
+}
+
+.icon-comments:before {
+	content: "\f086";
+}
+
+.icon-thumbs-up:before {
+	content: "\f087";
+}
+
+.icon-thumbs-down:before {
+	content: "\f088";
+}
+
+.icon-heart-empty:before {
+	content: "\f08a";
+}
+
+.icon-signout:before {
+	content: "\f08b";
+}
+
+.icon-linkedin-sign:before {
+	content: "\f08c";
+}
+
+.icon-pushpin:before {
+	content: "\f08d";
+}
+
+.icon-external-link:before {
+	content: "\f08e";
+}
+
+.icon-signin:before {
+	content: "\f090";
+}
+
+.icon-trophy:before {
+	content: "\f091";
+}
+
+.icon-github-sign:before {
+	content: "\f092";
+}
+
+.icon-upload-alt:before {
+	content: "\f093";
+}
+
+.icon-lemon:before {
+	content: "\f094";
+}
+
+.icon-phone:before {
+	content: "\f095";
+}
+
+.icon-bookmark-empty:before {
+	content: "\f097";
+}
+
+.icon-phone-sign:before {
+	content: "\f098";
+}
+
+.icon-twitter:before {
+	content: "\f099";
+}
+
+.icon-facebook:before {
+	content: "\f09a";
+}
+
+.icon-github:before {
+	content: "\f09b";
+}
+
+.icon-unlock:before {
+	content: "\f09c";
+}
+
+.icon-credit:before {
+	content: "\f09d";
+}
+
+.icon-rss:before {
+	content: "\f09e";
+}
+
+.icon-hdd:before {
+	content: "\f0a0";
+}
+
+.icon-bullhorn:before {
+	content: "\f0a1";
+}
+
+.icon-bell:before {
+	content: "\f0a2";
+}
+
+.icon-certificate:before {
+	content: "\f0a3";
+}
+
+.icon-hand-right:before {
+	content: "\f0a4";
+}
+
+.icon-hand-left:before {
+	content: "\f0a5";
+}
+
+.icon-hand-up:before {
+	content: "\f0a6";
+}
+
+.icon-hand-down:before {
+	content: "\f0a7";
+}
+
+.icon-circle-arrow-left:before {
+	content: "\f0a8";
+}
+
+.icon-circle-arrow-right:before {
+	content: "\f0a9";
+}
+
+.icon-circle-arrow-up:before {
+	content: "\f0aa";
+}
+
+.icon-circle-arrow-down:before {
+	content: "\f0ab";
+}
+
+.icon-globe:before {
+	content: "\f0ac";
+}
+
+.icon-wrench:before {
+	content: "\f0ad";
+}
+
+.icon-tasks:before {
+	content: "\f0ae";
+}
+
+.icon-filter:before {
+	content: "\f0b0";
+}
+
+.icon-briefcase:before {
+	content: "\f0b1";
+}
+
+.icon-fullscreen:before {
+	content: "\f0b2";
+}
+
+.icon-group:before {
+	content: "\f0c0";
+}
+
+.icon-link:before {
+	content: "\f0c1";
+}
+
+.icon-cloud:before {
+	content: "\f0c2";
+}
+
+.icon-beaker:before {
+	content: "\f0c3";
+}
+
+.icon-cut:before {
+	content: "\f0c4";
+}
+
+.icon-copy:before {
+	content: "\f0c5";
+}
+
+.icon-paper-clip:before {
+	content: "\f0c6";
+}
+
+.icon-save:before {
+	content: "\f0c7";
+}
+
+.icon-sign-blank:before {
+	content: "\f0c8";
+}
+
+.icon-reorder:before {
+	content: "\f0c9";
+}
+
+.icon-list-ul:before {
+	content: "\f0ca";
+}
+
+.icon-list-ol:before {
+	content: "\f0cb";
+}
+
+.icon-strikethrough:before {
+	content: "\f0cc";
+}
+
+.icon-underline:before {
+	content: "\f0cd";
+}
+
+.icon-table:before {
+	content: "\f0ce";
+}
+
+.icon-magic:before {
+	content: "\f0d0";
+}
+
+.icon-truck:before {
+	content: "\f0d1";
+}
+
+.icon-pinterest:before {
+	content: "\f0d2";
+}
+
+.icon-google-plus-sign:before {
+	content: "\f0d4";
+}
+
+.icon-google-plus:before {
+	content: "\f0d5";
+}
+
+.icon-money:before {
+	content: "\f0d6";
+}
+
+.icon-caret-down:before {
+	content: "\f0d7";
+}
+
+.icon-caret-up:before {
+	content: "\f0d8";
+}
+
+.icon-caret-left:before {
+	content: "\f0d9";
+}
+
+.icon-caret-right:before {
+	content: "\f0da";
+}
+
+.icon-columns:before {
+	content: "\f0db";
+}
+
+.icon-sort:before {
+	content: "\f0dc";
+}
+
+.icon-sort-down:before {
+	content: "\f0dd";
+}
+
+.icon-sort-up:before {
+	content: "\f0de";
+}
+
+.icon-envelope-alt:before {
+	content: "\f0e0";
+}
+
+.icon-linkedin:before {
+	content: "\f0e1";
+}
+
+.icon-undo:before {
+	content: "\f0e2";
+}
+
+.icon-legal:before {
+	content: "\f0e3";
+}
+
+.icon-dashboard:before {
+	content: "\f0e4";
+}
+
+.icon-comment-alt:before {
+	content: "\f0e5";
+}
+
+.icon-comments-alt:before {
+	content: "\f0e6";
+}
+
+.icon-bolt:before {
+	content: "\f0e7";
+}
+
+.icon-sitemap:before {
+	content: "\f0e8";
+}
+
+.icon-umbrella:before {
+	content: "\f0e9";
+}
+
+.icon-paste:before {
+	content: "\f0ea";
+}
+
+.icon-stethoscope:before {
+	content: "\f0eb";
+}
+
+.icon-suitcase:before {
+	content: "\f0ec";
+}
+
+.icon-bell-alt:before {
+	content: "\f0ed";
+}
+
+.icon-coffee:before {
+	content: "\f0ee";
+}
+
+.icon-food:before {
+	content: "\f0f0";
+}
+
+.icon-file-alt:before {
+	content: "\f0f1";
+}
+
+.icon-building:before {
+	content: "\f0f2";
+}
+
+.icon-hospital:before {
+	content: "\f0f3";
+}
+
+.icon-ambulance:before {
+	content: "\f0f4";
+}
+
+.icon-medkit:before {
+	content: "\f0f5";
+}
+
+.icon-angle-up:before {
+	content: "\f0f6";
+}
+
+.icon-angle-down:before {
+	content: "\f0f7";
+}
+
+.icon-desktop:before {
+	content: "\f0f8";
+}
+
+.icon-laptop:before {
+	content: "\f0f9";
+}
+
+.icon-tablet:before {
+	content: "\f0fa";
+}
+
+.icon-mobile:before {
+	content: "\f0fb";
+}
+
+.icon-circle-blank:before {
+	content: "\f0fc";
+}
+
+.icon-quote-left:before {
+	content: "\f0fd";
+}
+
+.icon-quote-right:before {
+	content: "\f0fe";
+}
+
+.icon-paperclip:before {
+	content: "\f104";
+}
+
+.icon-reply-all:before {
+	content: "\f107";
+}
+
+.icon-forward-2:before {
+	content: "\f108";
+}
+
+.icon-user-2:before {
+	content: "\f109";
+}
+
+.icon-users:before {
+	content: "\f10a";
+}
+
+.icon-heart-2:before {
+	content: "\f10b";
+}
+
+.icon-heart-3:before {
+	content: "\f10c";
+}
+
+.icon-thumbs-up-2:before {
+	content: "\f110";
+}
+
+.icon-thumbs-down-2:before {
+	content: "\f111";
+}
+
+.icon-chat:before {
+	content: "\f112";
+}
+
+.icon-comment-2:before {
+	content: "\f113";
+}
+
+.icon-skypeonline:before {
+	content: "\f39e";
+}
+
+.icon-error:before {
+	content: "\e002";
+}
+
+.icon-drawer:before {
+	content: "\e003";
+}
+
+.icon-drawer-2:before {
+	content: "\e004";
+}
+
+.icon-drawer-3:before {
+	content: "\e005";
+}
+
+.icon-volume-high:before {
+	content: "\e006";
+}
+
+.icon-images:before {
+	content: "\e008";
+}
+
+.icon-image:before {
+	content: "\e009";
+}
+
+.icon-pencil-2:before {
+	content: "\e00a";
+}
+
+.icon-cart:before {
+	content: "\e00e";
+}
+
+.icon-coin:before {
+	content: "\e00c";
+}
+
+.icon-credit-2:before {
+	content: "\e00d";
+}
+
+.icon-phone-2:before {
+	content: "\e00f";
+}
+
+.icon-menu:before {
+	content: "\e011";
+}
+
+.icon-earth:before {
+	content: "\e012";
+}
+
+.icon-briefcase-2:before {
+	content: "\e013";
+}
+
+.icon-airplane:before {
+	content: "\e014";
+}
+
+.icon-truck-2:before {
+	content: "\e015";
+}
+
+.icon-road-2:before {
+	content: "\e016";
+}
+
+.icon-happy:before {
+	content: "\e018";
+}
+
+.icon-sad:before {
+	content: "\e01b";
+}
+
+.icon-checkmark:before {
+	content: "\e019";
+}
+
+.icon-checkmark-circle:before {
+	content: "\e01c";
+}
+
+.icon-file-pdf:before {
+	content: "\e020";
+}
+
+.icon-file-openoffice:before {
+	content: "\e021";
+}
+
+.icon-file-word:before {
+	content: "\e022";
+}
+
+.icon-file-excel:before {
+	content: "\e023";
+}
+
+.icon-file-zip:before {
+	content: "\e024";
+}
+
+.icon-file-css:before {
+	content: "\e025";
+}
+
+.icon-file-powerpoint:before {
+	content: "\e026";
+}
+
+.icon-twitter-2:before {
+	content: "\e027";
+}
+
+.icon-google-plus-2:before {
+	content: "\e02a";
+}
+
+.icon-facebook-2:before {
+	content: "\e028";
+}
+
+.icon-flickr:before {
+	content: "\e029";
+}
+
+.icon-flickr-2:before {
+	content: "\e02b";
+}
+
+.icon-vimeo:before {
+	content: "\e02c";
+}
+
+.icon-soundcloud:before {
+	content: "\e02f";
+}
+
+.icon-skype:before {
+	content: "\e030";
+}
+
+.icon-apple:before {
+	content: "\e031";
+}
+
+.icon-windows8:before {
+	content: "\e032";
+}
+
+.icon-chrome:before {
+	content: "\e033";
+}
+
+.icon-firefox:before {
+	content: "\e034";
+}
+
+.icon-IE:before {
+	content: "\e035";
+}
+
+.icon-opera:before {
+	content: "\e036";
+}
+
+.icon-barcode:before {
+	content: "\f02a";
+}
+
+.icon-locked:before {
+	content: "\e000";
+}
+
+.icon-redo:before {
+	content: "\e001";
+}
+
+.icon-reply:before {
+	content: "\f106";
+}
+
+.icon-file-add:before {
+	content: "\e037";
+}
+
+.icon-folder-open:before {
+	content: "\f07c";
+}
+
+.icon-cord:before {
+	content: "\e00b";
+}
+
+.icon-cube:before {
+	content: "\e038";
+}
+
+.icon-puzzle:before {
+	content: "\e039";
+}
+
+.icon-tools:before {
+	content: "\e03a";
+}
+
+.icon-equalizer:before {
+	content: "\e03b";
+}
+
+.icon-brush:before {
+	content: "\e03c";
+}
+
+.icon-checkbox-partial:before {
+	content: "\e03d";
+}
+
+.icon-calendar:before {
+	content: "\f073";
+}
+
+.icon-calendar-2:before {
+	content: "\e03e";
+}
+
+.icon-lifebuoy:before {
+	content: "\e03f";
+}
+
+.icon-exclamation-sign:before {
+	content: "\f06a";
+}
+
+.icon-box-add:before {
+	content: "\e010";
+}
+
+.icon-box-remove:before {
+	content: "\e017";
+}
+
+.icon-facetime-video:before {
+	content: "\f03d";
+}
+
+.icon-play-2:before {
+	content: "\e007";
+}
+
+.icon-play-3:before {
+	content: "\e01a";
+}
+
+.icon-database:before {
+	content: "\e01d";
+}
+
+.icon-aid:before {
+	content: "\e01e";
+}
+
+.icon-vcard:before {
+	content: "\e01f";
+}
+
+.icon-compass:before {
+	content: "\e040";
+}
+
+.icon-map:before {
+	content: "\e041";
+}
+
+.icon-lightbulb:before {
+	content: "\e02e";
+}
+
+.icon-stats:before {
+	content: "\e042";
+}
+
+.icon-pie:before {
+	content: "\e043";
+}
+
+.icon-cart-2:before {
+	content: "\e044";
+}
+
+.icon-share-2:before {
+	content: "\e045";
+}
+
+.icon-html5:before {
+	content: "\e046";
+}
+
+.icon-github-2:before {
+	content: "\e047";
+}
+
+.icon-youtube:before {
+	content: "\e02d";
+}
+
+.icon-file-xml:before {
+	content: "\e048";
+}
+
+.icon-alert:before {
+	content: "\e049";
+}

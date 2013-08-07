@@ -1,0 +1,167 @@
+/*------------------------------------------------------------------------------------------------------------------------
+ @package: <%= name %> (app)
+
+ @author: <%= authorName %>
+ @www: <%= authorURL %>
+ @github: <%= authorGitHub %>
+
+ @twitter: <%= authorTwitter %>
+
+ @copyright: COPYRIGHT <%= currentDate %> <%= authorCompanyName %>
+ =============================================================================
+ Filename: _media-queries.scss
+ =============================================================================
+ This file is responsible for all media query code in the <%= name %> app.  Styles should be compiled using compass and sass.  The reason we don't use inline is because it's confusing, and we easily lose track of what media query is where.
+ --------------------------------------------------------------------------------------------------------------------- */
+
+/* --- main content ------------------------------------------------------------------------------------------------- */
+@import "variables.scss";
+@import "compass/css3";
+
+/* --- print (optional) --------------------------------------------------------------------------------------------- */
+
+@media print {
+	body {
+		background: transparent !important;
+		color: black !important;
+		text-shadow: none !important;
+		filter: none !important;
+		-ms-filter: none !important;
+	}
+/* Black prints faster: sanbeiji.com/archives/953 */
+	a, a:visited {
+		color: #444 !important;
+		text-decoration: underline;
+	}
+	a[href]:after {
+		content: " (" attr(href) ")";
+	}
+	abbr[title]:after {
+		content: " (" attr(title) ")";
+	}
+	.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+		content: "";
+	}
+/* Don't show links for images, or javascript/internal links */
+	pre, blockquote {
+		border: 1px solid #999;
+		page-break-inside: avoid;
+	}
+	thead {
+		display: table-header-group;
+	}
+/* css-discuss.incutio.com/wiki/Printing_Tables */
+	tr, img {
+		page-break-inside: avoid;
+	}
+	img {
+		max-width: 100% !important;
+	}
+	@page {
+		margin: 0.5cm;
+	}
+	p, h2, h3 {
+		orphans: 3;
+		widows: 3;
+	}
+
+	h2, h3 {
+		page-break-after: avoid;
+	}
+}
+
+/* =============================================================================
+Mobile main media query
+========================================================================== */
+
+@include breakpoint($<%= _.camelize(name) %>BreakpointMain) {
+	/* Ensure no increased font sizes */
+	body {
+		font-size: $<%= _.camelize(name) %>BaseFontSize;
+		-webkit-text-size-adjust: none;
+	}
+	/* Responsive grids */
+	.#{$<%= _.camelize(name) %>RowNotation}, body, .container, .button, button, .btn, input[type="submit"], a.submit, textarea, input, img, .actions, .form-actions, .btn-group, .toolbar, .nav ul li {
+		width: 100%;
+		min-width: 0;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.container {
+		padding: 0 $<%= _.camelize(name) %>Padding; //allow padding to the side of the container
+		@for $i from 1 through $<%= _.camelize(name) %>Num-cols {
+			.#{$<%= _.camelize(name) %>RowNotation} {
+				.#{col-name($i)}, .#{col-name($i)}:last-child {
+					width: auto;
+					float: none;
+					position: static !important;
+					margin-left: 0;
+					margin-right: 0;
+				}
+			}
+		}
+	}
+	header {
+		overflow: visible;
+	}
+	.toolbar, .form-actions, header, footer, caption, menu, figure, figcaption, nav, .button, button, .btn, input[type="submit"], a.submit {
+		text-align: center;
+	}
+	textarea, input {
+		padding: $<%= _.camelize(name) %>PaddingSmall $<%= _.camelize(name) %>Padding;
+	}
+	.hidden-phone {
+		display: none;
+	}
+	.container .show-phone, .button, button, .btn, input[type="submit"], a.submit {
+		display: block;
+	}
+	/* Responsive buttons */
+	.actions, .form-actions, .btn-group, .toolbar {
+		.button, button, .btn, input[type="submit"], a.submit {
+			&:first-child {
+				@include border-top-radius($<%= _.camelize(name) %>BorderRadiusLarge);
+				@include border-bottom-radius(0);
+			}
+			&:last-child {
+				@include border-top-radius(0);
+				@include border-bottom-radius($<%= _.camelize(name) %>BorderRadiusLarge);
+			}
+			margin: -#{$<%= _.camelize(name) %>MarginMini} 0 0 0; //buttons don't show double borders
+		}
+	}
+
+	/* Responsive navigation */
+	.nav ul {
+		li {
+			a {
+				display: block;
+				border-right: none;
+				border-left: none;
+				border-bottom: $<%= _.camelize(name) %>BorderWidth $<%= _.camelize(name) %>BorderStyle darken($<%= _.camelize(name) %>SecondaryColour, 25);
+			}
+			&:last-child a {
+				border-bottom: none;
+			}
+			ul, ul ul {
+				@include opacity(1);
+				visibility: visible;
+				font-size: $<%= _.camelize(name) %>FontSizeSmall;
+				display: block;
+				position: static;
+				margin: 0;
+			}
+		}
+	}
+	/*Responsive grid button*/
+	.responsive-grid {
+		& + input[type="checkbox"]:checked + nav {
+			@include visuallyhidden;
+		}
+	}
+
+	//forms at full screen width
+	input:not([type]), input[type="color"], input[type="email"], input[type="number"], input[type="password"], input[type="tel"], input[type="url"], input[type="text"] {
+		width: $<%= _.camelize(name) %>RowWidth;
+	}
+}

@@ -1,6 +1,6 @@
 {
 	"name": "generator-sass-boilerplate",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "A generator for creating customized SASS styles for HTML5 Apps",
 	"keywords": [
 		"yeoman-generator"
@@ -21,10 +21,10 @@
 		"test": "mocha"
 	},
 	"dependencies": {
-		"yeoman-generator": "~0.12.0"
+		"yeoman-generator": "*"
 	},
 	"devDependencies": {
-		"mocha": "~1.10.0"
+		"mocha": "*"
 	},
 	"engines": {
 		"node": ">=0.8.0"

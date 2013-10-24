@@ -1,6 +1,6 @@
 {
 	"name": "generator-sass-boilerplate",
-	"version": "0.0.22",
+	"version": "0.0.23",
 	"description": "A generator for creating customized SASS styles for HTML5 Apps",
 	"keywords": [
 		"yeoman-generator"

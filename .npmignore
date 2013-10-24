@@ -1,1 +1,9 @@
-.gitignore
+.DS_Store
+
+.idea
+
+node_modules
+/temp
+.sass-cache
+
+codekit-config.json

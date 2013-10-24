@@ -160,6 +160,10 @@ SassBoilerplateGenerator.prototype.app = function app()
 	if (this.includeIcomoon) {
 		this.mkdir("sass/partials/icomoon");
 		this.template("sass/partials/icomoon/_icomoon.scss", "sass/partials/icomoon/_icomoon.scss");
+		this.copy("fonts/icomoon/icomoon.eot", "fonts/icomoon/icomoon.eot");
+		this.copy("fonts/icomoon/icomoon.svg", "fonts/icomoon/icomoon.svg");
+		this.copy("fonts/icomoon/icomoon.ttf", "fonts/icomoon/icomoon.ttf");
+		this.copy("fonts/icomoon/icomoon.dev.svg", "fonts/icomoon/icomoon.dev.svg");
 	}
 
 	if (this.includeTypeHelpers) {

@@ -70,17 +70,17 @@ button, .btn, input[type="submit"] {
 /* =============================================================================
 Form inputs
 ========================================================================== */
-
-/* Allow inputs to be displayed similarly */
-input, input[type="password"], input[type="search"], isindex {
-	@include appearance("textfield");
-	&[type="search"] {
-		@extend %rounded-large; //large rounded corners for search
+input {
+	/* Allow inputs to be displayed similarly */
+	&, &[type="password"], &[type="search"], isindex {
+		@include appearance("textfield");
+		&[type="search"] {
+			@extend %rounded-large; //large rounded corners for search
+		}
 	}
-}
-
-input:not([type]), input[type="color"], input[type="email"], input[type="number"], input[type="password"], input[type="tel"], input[type="url"], input[type="text"] {
-	@extend %border-box;
-	@extend %normal-padding-left-right;
-	@extend %small-padding-top-bottom;
+	&:not([type]), &[type="color"], &[type="email"], &[type="number"], &[type="password"], &[type="tel"], &[type="url"], &[type="text"] {
+		@extend %border-box;
+		@extend %normal-padding-left-right;
+		@extend %small-padding-top-bottom;
+	}
 }

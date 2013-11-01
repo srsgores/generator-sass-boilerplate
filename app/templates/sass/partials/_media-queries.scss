@@ -104,17 +104,12 @@ Mobile main media query
 	header {
 		overflow: visible;
 	}
-	.toolbar, .form-actions, header, footer, caption, menu, figure, figcaption, nav, .button, button, .btn, input[type="submit"], a.submit {
-		text-align: center;
-	}
+	<% if (includeFormHelpers) {%
+	/* =============================================================================
+	Responsive Forms
+	========================================================================== */
 	textarea, input {
 		padding: $<%= _.camelize(name) %>PaddingSmall $<%= _.camelize(name) %>Padding;
-	}
-	.hidden-phone {
-		display: none;
-	}
-	.container .show-phone, .button, button, .btn, input[type="submit"], a.submit {
-		display: block;
 	}
 	/* Responsive buttons */
 	.actions, .form-actions, .btn-group, .toolbar {
@@ -130,38 +125,50 @@ Mobile main media query
 			margin: -#{$<%= _.camelize(name) %>MarginMini} 0 0 0; //buttons don't show double borders
 		}
 	}
-
-	/* Responsive navigation */
-	.nav ul {
-		li {
-			a {
-				display: block;
-				border-right: none;
-				border-left: none;
-				border-bottom: $<%= _.camelize(name) %>BorderWidth $<%= _.camelize(name) %>BorderStyle darken($<%= _.camelize(name) %>SecondaryColour, 25);
-			}
-			&:last-child a {
-				border-bottom: none;
-			}
-			ul, ul ul {
-				@include opacity(1);
-				visibility: visible;
-				font-size: $<%= _.camelize(name) %>FontSizeSmall;
-				display: block;
-				position: static;
-				margin: 0;
-			}
-		}
-	}
-	/*Responsive grid button*/
-	.responsive-grid {
-		& + input[type="checkbox"]:checked + nav {
-			@include visuallyhidden;
-		}
-	}
-
 	//forms at full screen width
 	input:not([type]), input[type="color"], input[type="email"], input[type="number"], input[type="password"], input[type="tel"], input[type="url"], input[type="text"] {
 		width: $<%= _.camelize(name) %>RowWidth;
 	}
+	<% } %>
+	.hidden-phone {
+		display: none;
+	}
+	.container .show-phone, .button, button, .btn, input[type="submit"], a.submit {
+		display: block;
+	}
+	.toolbar, .form-actions, header, footer, caption, menu, figure, figcaption, nav, .button, button, .btn, input[type="submit"], a.submit {
+		text-align: center;
+	}
+	<% if (includeBasicNav) {%>
+		/* =============================================================================
+		Responsive Navigation
+		========================================================================== */
+			.nav ul {
+				li {
+					a {
+						display: block;
+						border-right: none;
+						border-left: none;
+						border-bottom: $<%= _.camelize(name) %>BorderWidth $<%= _.camelize(name) %>BorderStyle darken($<%= _.camelize(name) %>SecondaryColour, 25);
+					}
+						&:last-child a {
+							border-bottom: none;
+					}
+					ul, ul ul {
+						@include opacity(1);
+						visibility: visible;
+						font-size: $<%= _.camelize(name) %>FontSizeSmall;
+						display: block;
+						position: static;
+						margin: 0;
+					}
+				}
+			}
+		/*Responsive grid button*/
+		.responsive-grid {
+			& + input[type="checkbox"]:checked + nav {
+				@include visuallyhidden;
+			}
+		}
+	<% } %>
 }

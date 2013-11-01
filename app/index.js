@@ -181,10 +181,8 @@ SassBoilerplateGenerator.prototype.app = function app()
 	if (this.includeBasicStyles) {
 		this.template("sass/partials/_base.scss", "sass/partials/_base.scss");
 	}
-
 	this.template("sass/partials/_variables.scss", "sass/partials/_variables.scss");
 	this.template("sass/partials/_mixins.scss", "sass/partials/_mixins.scss");
-
 	//bower dependency
 	this.template("_config.rb", "config.rb");
 	this.template("_package.json", "package.json");

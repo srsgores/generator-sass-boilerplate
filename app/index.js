@@ -5,7 +5,7 @@ var yeoman = require("yeoman-generator");
 
 var SassBoilerplateGenerator = module.exports = function SassBoilerplateGenerator(args, options, config)
 {
-	yeoman.generators.Base.apply(this, arguments);
+	yeoman.apply(this, arguments);
 
 	/*this.on("end", function ()
 	{
@@ -15,7 +15,7 @@ var SassBoilerplateGenerator = module.exports = function SassBoilerplateGenerato
 	this.pkg = JSON.parse(this.readFileAsString(path.join(__dirname, "../package.json")));
 };
 
-util.inherits(SassBoilerplateGenerator, yeoman.generators.Base);
+util.inherits(SassBoilerplateGenerator, yeoman);
 
 SassBoilerplateGenerator.prototype.askFor = function askFor()
 {
